@@ -1,0 +1,92 @@
+# Code review checklist
+P1 is must to have. P2 is good to have.
+## For Code Author
+### General
+- [ ] The code works. It performs its intended function, the logic is correct, etc. (P1)
+- [ ] There is no redundant or duplicate code. (P1)
+- [ ] No commented out code. (P1)
+- [ ] Do loops have a set length and correct termination conditions? (P1)
+- [ ] The code is easy to understand (P1)
+- [ ] All class, variable, and method modifiers are correct. (P1)
+- [ ] Debugging code is absent (P1)
+- [ ] Ideal data structures are used (P1)
+- [ ] The performance is acceptable with huge data (P1)
+- [ ] The code is maintainable easily (P1)
+- [ ] The code is as modular as possible (P2)
+- [ ] No memory leaks (P2)
+- [ ] Methods return early without compromising code readability (P2)
+- [ ] The code is scalable to support a huge number of users (P2)
+### Code formatting
+- [ ] Use alignments (left margin), proper white space. Also, ensure that code block starting point and ending point are easily identifiable. (P1)
+- [ ] Follows coding conventions (P1)
+- [ ] Ensure that proper naming conventions (Pascal, CamelCase, etc.) have been followed. (P1)
+- [ ] Code should fit in the standard 14-inch laptop screen.  There shouldn’t be a need to scroll horizontally to view the code. In a 21 inch monitor, other windows (toolbox, properties, etc.) can be opened while modifying code, so always write code keeping in view a 14-inch monitor. (P1)
+- [ ] Is this function or class too big? If yes, is the function or class having too many responsibilities? (P1)
+- [ ] Your code changes should not exceed 100 lines, otherwise, break it down in multiple pull requests. (P1)
+- [ ] you are following the team coding style. (P1)
+### Security
+- [ ] All data inputs are checked (for the correct type, length, format, and range) and encoded. (P1)
+- [ ] Returning errors are being caught of third-party utilities (P1)
+- [ ] Invalid parameter values are handled. (P1)
+- [ ] https://github.com/awslabs/git-secrets is installed and implemented (If you are using AWS) (P1)
+- [ ] Any sensitive data is not hardcoded in code. (P1) 
+- [ ] Output values are checked and encoded. (P2)
+### Testing
+- [ ] The code is testable. The code should be structured so that it doesn’t add too many or hide dependencies, is unable to initialize objects, test frameworks can use methods, etc. (P1)
+- [ ] Tests exist and they are comprehensive. (P2)
+- [ ] Unit tests actually test that the code is performing the intended functionality. (P2)
+
+## For Code Reviewer
+### Implementation
+- [ ] The proposed solution is well designed from a usability perspective (P1).
+- [ ] These code changes do what it is supposed to do. (P1)
+- [ ] This solution/code is easily understandable. (P1)
+- [ ] The API/UI is intuitive to use.
+- [ ] Correct framework, API, library, service are used. (P1)
+- [ ] Code is not duplicated. (P1)
+- [ ] The code is modular enough. (P1)
+- [ ] Code used design patterns or language-specific patterns in an optimal way. (P1)
+- [ ] This code follows the Object-Oriented Analysis and Design Principles, like the Single Responsibility Principle, Open-close principle, Liskov Substitution Principle, Interface Segregation, Dependency Injection. (P2)
+- [ ] This change did not add unwanted compile-time or run-time dependencies. (P2)
+- [ ] The code is at the right abstraction level (P2)
+### Logic Errors and Bugs
+- [ ] Code is handling all intended use cases (P1)
+- [ ] Code does not break for any inputs or external events (P1)
+### Error Handling and Logging
+- [ ] Error handling is done the correct way (P1)
+- [ ] Logging is done properly to debug efficiently (P1)
+- [ ] Useless logging is not present in the code (P1)
+- [ ] Invalid parameter values are handled. (P1)
+- [ ] Error messages are user-friendly. (P2)
+- [ ] The third-party utilities are used, are returning errors being caught. (P2)
+### Documentation
+- [ ] The API is well documented. (P1)
+- [ ] Necessary comments are added to the code (P1)
+- [ ] There are no redundant comments. (P1)
+### Testing and Testability
+- [ ] The code is testable. (P1)
+- [ ] The code is tested throughly with all possible inputs (P1)
+- [ ] It has enough automated tests (unit/integration/system tests) (P2)
+- [ ] The existing tests reasonably cover the code change? (P2)
+### Dependencies
+- [ ] If this change requires updates outside of the code, like updating the documentation, configuration, readme files, was this done? (P1)
+- [ ] Data is retrieved from external APIs or libraries checked accordingly. (P1)
+### Performance
+- [ ] This code change will impact system performance in a positive way. (P1)
+### Readability
+- [ ] The readability of the code has been improved by different function/method or variable names. (P1)
+- [ ] The code is located in the right file/folder/package. (P1)
+- [ ] The data flow is understandable. (P1)
+- [ ] The control flow is understandable. (P1)
+- [ ] Code doesn't have too many conditional statements/branches (P1)
+- [ ] There is not dead code (P1)
+- [ ] There is no commented out code. (P2)
+### Security
+- [ ] All data inputs are checked (for the correct type, length, format, and range)  (P1)
+- [ ] Authorization and authentication are handled in the right way. (P1)
+- [ ] User input data is santized before storing (P1)
+- [ ] Sensitive data like user data, credit card information are securely handled and stored and The right encryption is used. (P1)
+- [ ] Code deals with user input and it addresses security vulnerabilities such as cross-site scripting, SQL injection. (P1) 
+- [ ] This code does not open the software for security vulnerabilities. (P1)
+- [ ] No sensitive data like credentails or keys is hardcoded in code or comments. (P1)
+- [ ] This code change reveals some secret information (like keys, usernames, etc.). (P1)
