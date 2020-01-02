@@ -1,3 +1,5 @@
+Code review process:
+
 1. Clone the repository.
 2. Make changes.
 3. Branch and merge properly.
