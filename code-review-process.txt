@@ -1,9 +1,0 @@
-Code review process:
-
-1. Clone the repository.
-2. Make changes.
-3. Branch and merge properly.
-4. Create a merge/pull request and 
-   put this checklist https://github.com/tensult/coding-guidelines/blob/master/code-review-checklist.txt in 
-   merge/pull request message.
-5. Require code reviews before merging the changes.
