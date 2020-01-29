@@ -3,6 +3,8 @@
 - Clone the repository.
 - Create a new branch. Every new feature should have different branch.
    
+   **Note:** Before you create a branch, it's a good idea to adhere to a naming convention. For example, if your branch is for working on a new feature, you might use feature/<branch-name>. For a bug fix, you could use bugfix/<bug-number>.
+   
    To create a new branch and switch to it at the same time, you can run the git checkout command with the -b switch:
    ```
    $ git checkout -b BRANCH_NAME
